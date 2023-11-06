@@ -1,70 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HomeLand Estate - Real Estate Website
+Authors: Daniel Orwenjo, Elsie Oduor, Ian Odhiambo, Adrian Were
 
-## Available Scripts
+## Description
+HomeLand Estate is a modern and user-friendly real estate website built using React. It allows users to browse and search for properties, view property details, and get in touch with agents. The website provides a seamless user experience with responsive design, dynamic filtering, and a visually appealing interface.
 
-In the project directory, you can run:
+## Project Setup Instructions
+To set up and run the project locally on your machine, follow these steps:
 
-### `npm start`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/HomeLand-Estate.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd HomeLand-Estate
+   ```
+3. Install the dependencies using npm or yarn:
+   ```bash
+   npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```
+4. Start the development server:
+   ```bash
+   npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```
+5. Open your browser and access the website at http://localhost:3000.
 
-### `npm test`
+## Live Site
+You can view the live site on GitHub Pages: [HomeLand Estate](https://github.com/manlikeganga19/HomeLand-Estate)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Copyright and License
+This project is licensed under the [MIT License](LICENSE.md).
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project code is divided into several components that work together to create a smooth user experience. The main components include:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **App.js**: The main entry point of the application that sets up the routes and layout.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Home.js**: Displays the homepage with a banner and a list of houses for sale.
 
-### `npm run eject`
+- **PropertyDetails.js**: Displays the details of a specific property, including its features and contact form.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Search.js**: Implements filters for searching properties based on location, property type, and price range.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **PropertyDropdown.js**: Implements a dropdown for selecting property types.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **PriceRangeDropdown.js**: Implements a dropdown for selecting price ranges.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **HouseList.js**: Lists all houses with dynamic loading and a link to view property details.
 
-## Learn More
+- **House.js**: Displays a single house listing with key information.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **HouseContext.js**: Manages the application state, including house data, filtering options, and loading status.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Header.js**: Renders the header with logo and login/signup links.
 
-### Code Splitting
+- **Footer.js**: Renders the footer with navigation links and social media icons.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Each component is modular and follows React best practices for readability and maintainability. The project also uses various third-party libraries for UI elements and state management.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to customize, modify, and expand upon this project to create your ideal real estate website. Happy coding!# test_frontend
