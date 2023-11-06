@@ -1,45 +1,58 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
 
-const AnalyticsSection = () => {
-  const data = {
-    labels: ['Home 1', 'Home 2', 'Home 3', 'Home 4', 'Home 5'],
-    datasets: [
-      {
-        label: 'Most Visited Homes',
-        data: [10, 20, 30, 15, 25],
-        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-        borderColor: 'rgba(54, 162, 235, 1)',
-        borderWidth: 1,
-      },
-      {
-        label: 'Most in Need',
-        data: [5, 15, 20, 10, 30],
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
-      },
-    ],
-  };
+const Analytics = () => {
+  // Sample data for most in need and most visited (replace this with your actual data)
+  const mostInNeedData = [
+    { id: 1, name: 'John Doe', need: 'Food' },
+    { id: 2, name: 'Jane Smith', need: 'Shelter' },
+    // Add more sample data as needed
+  ];
 
-  const options = {
-    indexAxis: 'y',
-    scales: {
-      x: {
-        beginAtZero: true,
-      },
-      y: {
-        beginAtZero: true,
-      },
-    },
-  };
+  const mostVisitedData = [
+    { id: 1, name: 'Location A', visits: 50 },
+    { id: 2, name: 'Location B', visits: 30 },
+    // Add more sample data as needed
+  ];
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Analytics</h2>
-      <Bar data={data} options={options} />
+      <h2>Most in Need</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Need</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mostInNeedData.map((item) => (
+            <tr key={item.id}>
+              <td>{item.name}</td>
+              <td>{item.need}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2>Most Visited</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Number of Visits</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mostVisitedData.map((item) => (
+            <tr key={item.id}>
+              <td>{item.name}</td>
+              <td>{item.visits}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default AnalyticsSection;
+export default Analytics;
