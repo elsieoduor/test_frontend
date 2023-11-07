@@ -12,17 +12,13 @@ const HomesList = () => {
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
-    // Logic to filter homes based on the search term
-    // You might want to filter the 'homes' state here
   };
 
   const handleEdit = (homeId) => {
-    // Logic to handle edit functionality
     console.log(`Edit home with ID ${homeId}`);
   };
 
   const handleDelete = (homeId) => {
-    // Logic to handle delete functionality
     console.log(`Delete home with ID ${homeId}`);
   };
 

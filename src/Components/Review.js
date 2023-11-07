@@ -14,7 +14,6 @@ const Review = () => {
       stars: 4,
       review: 'Great home, wonderful experience. Would love to visit again.',
     },
-    // Add more reviews as needed
   ];
 
   return (

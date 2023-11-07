@@ -6,18 +6,14 @@ const UserForm = () => {
 
   const handleShowForm = () => {
     setShowForm(true);
-    // Additional logic for initializing form fields if needed
   };
 
   const handleCancel = () => {
     setShowForm(false);
-    // Additional logic for resetting form fields if needed
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Logic to handle form submission (add or edit user)
-    // You might want to update the users state or perform API calls here
     setShowForm(false);
   };
 

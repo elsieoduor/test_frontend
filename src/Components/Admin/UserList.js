@@ -5,24 +5,19 @@ const UserList = () => {
   const [users, setUsers] = useState([
     { id: 1, name: 'John Doe', email: 'john@example.com' },
     { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
-    // Add more sample user data as needed
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
-    // Logic to filter users based on the search term
-    // You might want to filter the 'users' state here
   };
 
   const handleEdit = (userId) => {
-    // Logic to handle edit functionality
     console.log(`Edit user with ID ${userId}`);
   };
 
   const handleDelete = (userId) => {
-    // Logic to handle delete functionality
     console.log(`Delete user with ID ${userId}`);
   };
 

@@ -7,9 +7,7 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    // Perform registration logic using email and password state values
     console.log('Registering with:', email, password);
-    // You can add your registration logic using these email and password values
   };
   return (
     <div className="flex h-screen">
