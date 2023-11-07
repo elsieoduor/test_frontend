@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import clothes from "../assets/images/clothes.jpg";
-import health from "../assets/images/health.jpg";
-// import household from "../assets/images/household.jpg";
+import clothes from "../../assets/images/clothes.jpg";
+import health from "../../assets/images/health.jpg";
+import household from "../../assets/images/household.jpg";
 
 const Donations = () => {
   const donations = [
@@ -18,12 +18,12 @@ const Donations = () => {
       title: 'Donation Title 2',
       description: 'Description of the donation item 2.',
     },
-    // {
-    //   id: 3,
-    //   image: household,
-    //   title: 'Donation Title 3',
-    //   description: 'Description of the donation item 3.',
-    // },
+    {
+      id: 3,
+      image: household,
+      title: 'Donation Title 3',
+      description: 'Description of the donation item 3.',
+    },
     
   ];
 
@@ -32,12 +32,10 @@ const Donations = () => {
       <p className="text-center text-3xl font-bold mb-4">Make A Difference</p>
       <div className="mb-6 flex items-center justify-between">
         <p className="text-lg">Below are donations you can make</p>
-        <a href="/donations" className="flex items-center text-blue-500 hover:underline">
-          View More <span className="ml-1">&#8594;</span>
-        </a>
+        
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
         {donations.map((donation) => (
           <div key={donation.id} className="border rounded-lg overflow-hidden shadow-lg">
             <img src={donation.image} alt={donation.title} className="w-full" />

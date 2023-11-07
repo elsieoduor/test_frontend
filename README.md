@@ -62,4 +62,4 @@ The project code is divided into several components that work together to create
 
 Each component is modular and follows React best practices for readability and maintainability. The project also uses various third-party libraries for UI elements and state management.
 
-Feel free to customize, modify, and expand upon this project to create your ideal real estate website. Happy coding!# test_frontend
+Feel free to customize, modify, and expand upon this project to create your ideal real estate website. Happy coding!

@@ -20,12 +20,12 @@ const Slider = () => {
         text: 'Text Overlay 2',
       },
     ];
-  
+    
     return (
-      <Carousel showArrows={true} infiniteLoop={true} showThumbs={false}>
+      <Carousel showArrows={true} infiniteLoop={true} showThumbs={false} showStatus={false}>
         {slides.map((slide, index) => (
           <div key={index} className="relative">
-            <img src={slide.image} alt={`Slide ${index}`} />
+           <img src={slide.image} alt={`Slide ${index}`} className="h-96 max-w-none w-3/4 object-cover" />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
               <h2 className="text-4xl font-bold">{slide.text}</h2>
 

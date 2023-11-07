@@ -1,21 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 const NavBar = () => {
   return (
-    <nav className="bg-tertiary flex items-center justify-between py-4 px-6" style={{ backgroundColor: '#394867' }}>
-      <div className="text-white font-bold text-2xl">Hearts to Homes</div>
+    <nav className="bg-tertiary flex items-center justify-between py-4 px-6" style={{ backgroundColor: '#E57C23', color:' #F8F1F1' }}>
+     <Link to="/" className="block">
+        <div className="text-white font-bold text-2xl">Hearts to Homes</div>
+      </Link>
 
       <div className="flex space-x-4">
-        <a href="#about" className="text-white hover:text-accent transition duration-300">Link 1</a>
-        <a href="#donation" className="text-white hover:text-accent transition duration-300">Link 2</a>
-        <a href="#visit" className="text-white hover:text-accent transition duration-300">Link 3</a>
-        <a href="#visit" className="text-white hover:text-accent transition duration-300">Link 4</a>
-        <a href="#visit" className="text-white hover:text-accent transition duration-300">Link 5</a>
+        <Link to="/about" className="text-white hover:text-accent transition duration-300">About</Link>
+        <Link to="/children_homes" className="text-white hover:text-accent transition duration-300">Homes</Link>
+        <Link to="/donations" className="text-white hover:text-accent transition duration-300">Donations</Link>
+        <Link to="/visits" className="text-white hover:text-accent transition duration-300">Visit</Link>
       </div>
 
-      <div>
-        <button className="text-white font-semibold mr-4 py-2 px-4 rounded hover:bg-accent transition duration-300" style={{ backgroundColor: '#212A3E' }}>Login</button>
-        <button className="text-white font-semibold py-2 px-4 rounded hover:bg-accent transition duration-300" style={{ backgroundColor: '#212A3E' }}>Register</button>
+      <div className="flex items-center">
+          <Link to="/login" className="block">
+            <button className="text-white font-semibold mr-4 py-2 px-4 rounded hover:bg-accent transition duration-300" style={{ backgroundColor: '#E8AA42', color:' #F8F1F1' }}>
+              Login
+            </button>
+          </Link>
+          <Link to="/register" className="block">
+            <button className="text-white font-semibold mr-4 py-2 px-4 rounded hover:bg-accent transition duration-300" style={{ backgroundColor: '#E8AA42', color:' #F8F1F1' }}>
+              Register
+            </button>
+          </Link>
 
       </div>
     </nav>
