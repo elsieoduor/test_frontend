@@ -1,10 +1,6 @@
 import React from 'react'
 
 const Contact = () => {
-  // const handleSocialClick = (link) => {
-  //   window.open(link, '_blank');
-  // };
-
   return (
     <div className="lg:mx-32 mt-8 lg:mt-16 mb-10">
     <p className="text-center text-3xl font-bold mb-4">Contact</p>

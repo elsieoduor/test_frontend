@@ -8,23 +8,23 @@ const Sidebar = () => {
       <ul>
         <li className="flex items-center mb-4">
           <span className="mr-2">🏠</span>
-          <a href="/admin">Dashboard</a>
+          <a href="/home">Dashboard</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">👥</span>
-          <a href="/admin/users">Users</a>
+          <a href="/users">Users</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">🏡</span>
-          <a href="/admin/homes">Homes</a>
+          <a href="/homes">Homes</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">📊</span>
-          <a href="/admin/analytics">Analytics</a>
+          <a href="/analytics">Analytics</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">🚪</span>
-          <a href="/login">Logout</a>
+          <a href="/logout">Logout</a>
         </li>
       </ul>
     </div>
