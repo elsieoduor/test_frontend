@@ -1,56 +1,40 @@
 import React from 'react';
+import { Bar } from 'react-chartjs-2';
+import Chart from 'chart.js/auto';
 
-const Analytics = () => {
-  // Sample data for most in need and most visited (replace this with your actual data)
-  const mostInNeedData = [
-    { id: 1, name: 'John Doe', need: 'Food' },
-    { id: 2, name: 'Jane Smith', need: 'Shelter' },
-    // Add more sample data as needed
-  ];
+const Analytics = ({ homes }) => {
+  // First, ensure that `homes` is an array before attempting to map over it
+  if (!Array.isArray(homes)) {
+    // If homes is not an array, return null or some placeholder content
+    return <div>Loading...</div>;
+  }
 
-  const mostVisitedData = [
-    { id: 1, name: 'Location A', visits: 50 },
-    { id: 2, name: 'Location B', visits: 30 },
-    // Add more sample data as needed
-  ];
+  // Now we can safely map over homes because we have confirmed it's an array
+  const data = {
+    labels: homes.map(home => home.name),
+    datasets: [
+      {
+        label: 'Visits',
+        data: homes.map(home => home.visits),
+        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+      },
+      {
+        label: 'Donations Needed',
+        data: homes.map(home => home.totalDonationsNeeded - home.donations),
+        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+      },
+    ],
+  };
+
+  // If you want to check the content of `homes`, make sure to log it correctly
+  console.log(homes);
 
   return (
-    <div>
-      <h2>Most in Need</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Need</th>
-          </tr>
-        </thead>
-        <tbody>
-          {mostInNeedData.map((item) => (
-            <tr key={item.id}>
-              <td>{item.name}</td>
-              <td>{item.need}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <h2>Most Visited</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Number of Visits</th>
-          </tr>
-        </thead>
-        <tbody>
-          {mostVisitedData.map((item) => (
-            <tr key={item.id}>
-              <td>{item.name}</td>
-              <td>{item.visits}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="p-4 bg-white rounded-md shadow-md">
+      <h3 className="text-lg font-semibold mb-4">Analytics</h3>
+      <div className='h-2/3 w-2/3 mb-36'>
+      <Bar data={data} />
+      </div>
     </div>
   );
 };

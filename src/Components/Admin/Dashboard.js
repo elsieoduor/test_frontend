@@ -6,7 +6,6 @@ import Users from './Users'
 // import UserForm from './UserForm'
 // import HomesForm from './HomesForm'
 // import HomesList from './HomesList'
-// import AnalyticsView from './AnalyticsView'
 // import Analytics from './Analytics'
 // import NavBar from '../NavBar'
 
@@ -24,7 +23,7 @@ const Dashboard = () => {
           {/* < UserForm/> */}
           {/* <HomesForm /> */}
           {/* <HomesList /> */}
-          {/* <AnalyticsView/> */}
+         
         </div>
       </div>
     </div>
