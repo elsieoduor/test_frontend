@@ -12,7 +12,7 @@ const DonationForm = ({ handleMakeDonation }) => {
   };
 
   const handleCancel = () => {
-    navigate('/home');
+    navigate('/');
   };
 
   return (

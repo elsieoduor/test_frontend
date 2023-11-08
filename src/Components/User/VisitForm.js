@@ -11,7 +11,7 @@ const VisitForm = ({ setVisitDate }) => {
   };
 
   const handleCancel = () => {
-    navigate('/home');
+    navigate('/');
   };
 
   return (
