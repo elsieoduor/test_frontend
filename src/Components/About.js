@@ -11,6 +11,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-wrap justify-center">
+        {/* Three cards - Example */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
           <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">
@@ -21,6 +22,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Card 2 */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
         <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">
@@ -31,6 +33,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Card 3 */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
         <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">

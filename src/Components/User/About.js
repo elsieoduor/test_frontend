@@ -54,6 +54,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-wrap justify-center">
+        {/* Three cards - Example */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
           <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">
@@ -64,6 +65,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Card 2 */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
         <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">
@@ -74,6 +76,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Card 3 */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
         <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">
@@ -85,6 +88,7 @@ const About = () => {
         </div>
       </div>
 
+      {/* Project Section */}
       <section className="text-center w-full my-10">
       <p className="text-3xl font-bold mb-4">Projects</p>
       <div className="flex flex-wrap justify-center">
@@ -99,6 +103,7 @@ const About = () => {
       </div>
     </section>
 
+        {/* Location Section */}
         <section className="w-full my-10">
       <p className="text-3xl font-bold mb-4">Location</p>
       <table className="w-full">
@@ -112,6 +117,7 @@ const About = () => {
         </tbody>
       </table>
     </section>
+        {/* Donate Now Banner */}
     <section className="text-center bg-gray-200 py-10 flex justify-between items-center">
       <div>
         <p className="text-4xl font-bold mb-4">Donate Now</p>

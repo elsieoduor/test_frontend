@@ -13,7 +13,12 @@ import Visit from './Components/User/Visit';
 import DonationForm from './Components/User/DonationForm';
 import VisitForm from './Components/User/VisitForm';
 import OneHome from './Components/User/OneHome';
-
+import Users from './Components/Admin/Users'
+import UserList from './Components/Admin/UserList'
+import UserForm from './Components/Admin/UserForm'
+import HomesAdmin from './Components/Admin/Homes'
+import HomesList from './Components/Admin/HomesList'
+import HomesForm from './Components/Admin/HomesForm'
 
 function App() {
   return (
@@ -31,7 +36,16 @@ function App() {
           <Route  path="/donate"  element={<DonationForm/>}/>
           <Route  path="/home/:id"  element={<OneHome/>}/>
           <Route  path="/schedule_visit"  element={<VisitForm/>}/>
+
+          {/* admin */}
           <Route  path="/admin"  element={<Dashboard/>}/>
+          <Route  path="/admin/users"  element={<Users />}/>
+          <Route  path="/admin/user_list"  element={<UserList />}/>
+          <Route  path="/admin/add_user"  element={< UserForm />}/>
+          <Route  path="/admin/homes"  element={<HomesAdmin />}/>
+          <Route  path="/admin/homes_list"  element={<HomesList />}/>
+          <Route  path="/admin/add_home"  element={< HomesForm />}/>
+        
 
         </Routes>
         <Footer />
