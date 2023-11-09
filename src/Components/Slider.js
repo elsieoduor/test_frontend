@@ -9,15 +9,15 @@ const Slider = () => {
     const slides = [
       {
         image: child4,
-        text: 'Text Overlay 1',
+        text: 'JOIN THE TEAM',
       },
       {
         image: child3,
-        text: 'Text Overlay 2',
+        text: 'HOW CAN YOU HELP ?',
       },
       {
         image: child2,
-        text: 'Text Overlay 2',
+        text: 'KINDNESS IS DOING WHAT YOU CAN WHERE YOU ARE WITH WHAT YOU HAVE.',
       },
     ];
     
