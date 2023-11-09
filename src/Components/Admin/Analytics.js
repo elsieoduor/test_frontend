@@ -1,6 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import Chart from 'chart.js/auto';
+
 
 const Analytics = ({ homes }) => {
   // First, ensure that `homes` is an array before attempting to map over it
