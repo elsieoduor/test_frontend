@@ -6,20 +6,31 @@ import child3 from "../../assets/images/children3.jpg";
 import child2 from "../../assets/images/children2.jpg";
 
 const About = () => {
-  const slides = [
-    {
-      image: child4,
-      text: 'Text Overlay 1',
-    },
-    {
-      image: child3,
-      text: 'Text Overlay 2',
-    },
-    {
-      image: child2,
-      text: 'Text Overlay 2',
-    },
-  ];
+  // const slides = [
+  //   {
+  //     image: child4,
+  //     text: 'Text Overlay 1',
+  //   },
+  //   {
+  //     image: child3,
+  //     text: 'Text Overlay 2',
+  //   },
+  //   {
+  //     image: child2,
+  //     text: 'Text Overlay 2',
+  //   },
+  // ];
+  const largeTextStyle = {
+    fontSize: '36px',  // Adjust the font size as needed
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: '20px', // Spacing between the text
+};
+
+const smallTextStyle = {
+    fontSize: '24px',  // Adjust the font size as needed
+    textAlign: 'center',
+};
 
   const projectData = [
     {
@@ -93,16 +104,16 @@ const About = () => {
 
   return (
     <>
-      <Carousel showArrows={true} infiniteLoop={true} showThumbs={false} showStatus={false}>
-        {slides.map((slide, index) => (
-          <div key={index} className="relative">
-            <img src={slide.image} alt={`Slide ${index}`} className="h-96 max-w-none w-3/4 object-cover" />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h2 className="text-4xl font-bold">{slide.text}</h2>
+     <div className="intro-image">
+                <marquee behavior="" direction="">
+                    <img src="https://zinginstruments.com/wp-content/uploads/family-on-a-beach.jpg" alt="Welcome to Our Home"  />
+                </marquee>
+                {/* <div className='image-text'>
+                    <h1 style={largeTextStyle}>Join The Team</h1>
+                    <h1 style={largeTextStyle}>How Can You Help?</h1>
+                    <p style={smallTextStyle}>Kindness Is Doing What You Can Where You Are With What You Have.</p>
+                </div> */}
             </div>
-          </div>
-        ))}
-      </Carousel>
 
       <div className="text-center mt-10">
         <p className="text-3xl font-bold mb-4">About Us</p>
