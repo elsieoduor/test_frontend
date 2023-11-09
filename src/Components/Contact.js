@@ -26,21 +26,7 @@ const Contact = () => {
       </div>
 
 
-      <div className="border rounded-lg overflow-hidden shadow-lg"> 
-          <iframe
-            title="Map"
-            src="https://www.google.com/maps/d/u/0/viewer?mid=1SuwNJ-HqTWSF2Bmaur7HqmVqZBk&hl=en&ll=-1.2933369999999977%2C36.80705299999999&z=17"
-            width="100%"
-            height="300"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-          ></iframe>
-        </div>
+      
     </div>
   </div>
   );

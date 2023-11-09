@@ -87,4 +87,27 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
+  .contact {
+    display: flex;
+    width: 1400px;
+    margin: 30px auto;
+    padding: 40px;
+    gap: 40px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 0.2rem;
+  }
+  
+  .contact-title {
+    color: #a40e4c;
+  }
+  
+  .contact-btn {
+    justify-self: flex-end;
+    margin-top: 9rem;
+  }
   

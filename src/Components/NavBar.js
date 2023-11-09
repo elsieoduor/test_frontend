@@ -14,6 +14,9 @@ const NavBar = () => {
         <Link to="/children_homes" className="text-white hover:text-accent transition duration-300">Homes</Link>
         <Link to="/donations" className="text-white hover:text-accent transition duration-300">Donations</Link>
         <Link to="/visits" className="text-white hover:text-accent transition duration-300">Visit</Link>
+        <Link to="/donate" className="text-white hover:text-accent transition duration-300">Donate</Link>
+        <Link to="/contact" className="text-white hover:text-accent transition duration-300">Contact Us</Link>
+        {/* <Link to="/review" className="text-white hover:text-accent transition duration-300">Reviews</Link> */}
       </div>
 
       <div className="flex items-center">

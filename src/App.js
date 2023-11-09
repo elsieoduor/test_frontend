@@ -13,6 +13,8 @@ import Visit from './Components/User/Visit';
 import DonationForm from './Components/User/DonationForm';
 import VisitForm from './Components/User/VisitForm';
 import OneHome from './Components/User/OneHome';
+import Contact from './Components/User/Contact';
+// import Review from './Components/User/Review';
 
 
 function App() {
@@ -29,6 +31,10 @@ function App() {
           <Route  path="/children_homes"  element={<Homes/>}/>
           <Route  path="/visits"  element={<Visit/>}/>
           <Route  path="/donate"  element={<DonationForm/>}/>
+          <Route  path="/visit/:id"  element={<VisitForm/>}/>
+          <Route  path="/home/:id"  element={<OneHome/>}/>
+          <Route  path="/contact"  element={<Contact/>}/>
+          {/* <Route  path="/review"  element={<Review/>}/> */}
           <Route  path="/home/:id"  element={<OneHome/>}/>
           <Route  path="/schedule_visit"  element={<VisitForm/>}/>
           <Route  path="/admin"  element={<Dashboard/>}/>

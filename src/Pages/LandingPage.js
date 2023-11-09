@@ -2,8 +2,9 @@ import React from 'react'
 import Slider from '../Components/Slider'
 import About from '../Components/About'
 import Donations from '../Components/Donations'
-import Review from '../Components/Review'
+import Reviews from '../Components/Reviews'
 import Contact from '../Components/Contact'
+import Map from '../Pages/Map'
 
 
 
@@ -13,8 +14,9 @@ const LandingPage = () => {
       <Slider />
       <About />
       <Donations />
-      <Review />
+      <Reviews />
       <Contact />
+      <Map/>
     </div>
 
   )
