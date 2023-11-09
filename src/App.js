@@ -19,9 +19,15 @@ import UserForm from './Components/Admin/UserForm'
 import HomesAdmin from './Components/Admin/Homes'
 import HomesList from './Components/Admin/HomesList'
 import HomesForm from './Components/Admin/HomesForm'
+import Analytics from './Components/Admin/Analytics'
 
 function App() {
-  return (
+  const homesData = [
+    { id: 1, name: "Sunnydale Home", visits: 120, donations: 2000, totalDonationsNeeded: 7000 },
+    { id: 2, name: "Rivendell Shelter", visits: 75, donations: 3000, totalDonationsNeeded: 8000 },
+    { id: 3, name: "Hogwarts Orphanage", visits: 180, donations: 1000, totalDonationsNeeded: 5000 }
+  ];
+return (
     <Router>
       <div className="App">
         <NavBar />
@@ -45,7 +51,7 @@ function App() {
           <Route  path="/admin/homes"  element={<HomesAdmin />}/>
           <Route  path="/admin/homes_list"  element={<HomesList />}/>
           <Route  path="/admin/add_home"  element={< HomesForm />}/>
-        
+          <Route  path="/admin/analytics"  element={< Analytics homes={homesData}/>}/>
 
         </Routes>
         <Footer />
