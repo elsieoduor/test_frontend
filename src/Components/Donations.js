@@ -1,37 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import clothes from "../assets/images/children1.jpg";
+import clothes from "../assets/images/clothes.jpg";
 import health from "../assets/images/health.jpg";
-import household from "../assets/images/packedfood.jpg";
-import funds from "../assets/images/helpinghand.jpg"
-
+// import household from "../assets/images/household.jpg";
 
 const Donations = () => {
   const donations = [
     {
       id: 1,
       image: clothes,
-      title: 'Donate Cloathes.',
+      title: 'Donation Title 1',
       description: 'Description of the donation item 1.',
     },
     {
       id: 2,
       image: health,
-      title: 'Donate Medicine.',
+      title: 'Donation Title 2',
       description: 'Description of the donation item 2.',
     },
-    {
-      id: 3,
-      image: household,
-      title: 'Donate Food Items.',
-      description: 'Description of the donation item 3.',
-    },
-    {
-      id: 4,
-      image: funds,
-      title: 'Donate Funds.',
-      description: 'Description of the donation item 3.',
-    },
+    // {
+    //   id: 3,
+    //   image: household,
+    //   title: 'Donation Title 3',
+    //   description: 'Description of the donation item 3.',
+    // },
     
   ];
 

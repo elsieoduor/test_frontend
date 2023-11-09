@@ -1,14 +1,17 @@
 import React from 'react';
 
 const Analytics = () => {
+  // Sample data for most in need and most visited (replace this with your actual data)
   const mostInNeedData = [
     { id: 1, name: 'John Doe', need: 'Food' },
     { id: 2, name: 'Jane Smith', need: 'Shelter' },
+    // Add more sample data as needed
   ];
 
   const mostVisitedData = [
     { id: 1, name: 'Location A', visits: 50 },
     { id: 2, name: 'Location B', visits: 30 },
+    // Add more sample data as needed
   ];
 
   return (

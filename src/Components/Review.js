@@ -4,16 +4,17 @@ const Review = () => {
   const reviews = [
     {
       id: 1,
-      name: 'Mary Silas',
+      name: 'John Doe',
       stars: 5,
       review: 'A beautiful home with an amazing view. Truly enjoyed my stay!',
     },
     {
       id: 2,
-      name: 'Derrick Smith',
+      name: 'Jane Smith',
       stars: 4,
       review: 'Great home, wonderful experience. Would love to visit again.',
     },
+    // Add more reviews as needed
   ];
 
   return (
