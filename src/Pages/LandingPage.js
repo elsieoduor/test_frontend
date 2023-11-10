@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from '../Components/Slider'
 import About from '../Components/About'
 import Donations from '../Components/Donations'
-import Reviews from '../Components/Reviews'
+import Reviews from '../Components/Review'
 import Contact from '../Components/Contact'
 import Map from '../Pages/Map'
 

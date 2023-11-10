@@ -2,14 +2,6 @@ import React from 'react'
 import Sidebar from './Sidebar'
 import Homes from './Homes'
 import Users from './Users'
-// import UserList from './UserList'
-// import UserForm from './UserForm'
-// import HomesForm from './HomesForm'
-// import HomesList from './HomesList'
-// import AnalyticsView from './AnalyticsView'
-// import Analytics from './Analytics'
-// import NavBar from '../NavBar'
-
 const Dashboard = () => {
   return (
     <div className="flex flex-col h-screen">
@@ -19,16 +11,10 @@ const Dashboard = () => {
         <div className="w-full p-8">
           <Homes />
           <Users />
-          {/* <Analytics /> */}
-          {/* <UserList /> */}
-          {/* < UserForm/> */}
-          {/* <HomesForm /> */}
-          {/* <HomesList /> */}
-          {/* <AnalyticsView/> */}
         </div>
       </div>
     </div>
   )
 }
 
-export default Dashboard
+export default Dashboard;

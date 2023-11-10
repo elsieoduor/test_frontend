@@ -1,3 +1,39 @@
+// import React from 'react'
+
+// const Sidebar = () => {
+//   return (
+//     <div className="w-64 bg-gray-800 text-white h-screen">
+//     <div className="p-4">
+//       <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
+//       <ul>
+//         <li className="flex items-center mb-4">
+//           <span className="mr-2">🏠</span>
+//           <a href="/home">Dashboard</a>
+//         </li>
+//         <li className="flex items-center mb-4">
+//           <span className="mr-2">👥</span>
+//           <a href="/users">Users</a>
+//         </li>
+//         <li className="flex items-center mb-4">
+//           <span className="mr-2">🏡</span>
+//           <a href="/homes">Homes</a>
+//         </li>
+//         <li className="flex items-center mb-4">
+//           <span className="mr-2">📊</span>
+//           <a href="/analytics">Analytics</a>
+//         </li>
+//         <li className="flex items-center mb-4">
+//           <span className="mr-2">🚪</span>
+//           <a href="/logout">Logout</a>
+//         </li>
+//       </ul>
+//     </div>
+//   </div>
+//   )
+// }
+
+// export default Sidebar
+
 import React from 'react'
 
 const Sidebar = () => {
@@ -8,23 +44,23 @@ const Sidebar = () => {
       <ul>
         <li className="flex items-center mb-4">
           <span className="mr-2">🏠</span>
-          <a href="/home">Dashboard</a>
+          <a href="/admin">Dashboard</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">👥</span>
-          <a href="/users">Users</a>
+          <a href="/admin/users">Users</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">🏡</span>
-          <a href="/homes">Homes</a>
+          <a href="/admin/homes">Homes</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">📊</span>
-          <a href="/analytics">Analytics</a>
+          <a href="/admin/analytics">Analytics</a>
         </li>
         <li className="flex items-center mb-4">
           <span className="mr-2">🚪</span>
-          <a href="/logout">Logout</a>
+          <a href="/login">Logout</a>
         </li>
       </ul>
     </div>
@@ -32,4 +68,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar;

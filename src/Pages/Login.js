@@ -15,33 +15,29 @@ function Login({ onLogin }) {
     password: Yup.string().required("Password is required"),
   });
 
-  const handleSubmit = async (values, { setSubmitting }) => {
+  const handleSubmit = async (values) => {
     try {
-      const response = await fetch("/login", {
-        method: "POST",
+      const response = await fetch('http://127.0.0.1:8000/api/login/', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(values),
       });
-
-      if (response.ok) {
-        const { token, user } = await response.json();
-
-        localStorage.setItem("token", token);
-        onLogin(user);
-        navigate("/");
-      } else {
-        const error = await response.json();
-        alert(error.message);
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
+  
+      const data = await response.json();
+      console.log('Login successful:', data);
+      // Handle successful login (e.g., redirect, update state)
     } catch (error) {
-      console.error("Login error:", error);
+      console.error('Login error:', error.message);
+      // Handle login error (e.g., display error message to user)
     }
-
-    setSubmitting(false);
   };
-
+  
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="bg-white p-8 rounded shadow-md mt-8 mb-8">

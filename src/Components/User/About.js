@@ -1,25 +1,10 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
+
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import child4 from "../../assets/images/children4.jpg";
-import child3 from "../../assets/images/children3.jpg";
-import child2 from "../../assets/images/children2.jpg";
+
 
 const About = () => {
-  // const slides = [
-  //   {
-  //     image: child4,
-  //     text: 'Text Overlay 1',
-  //   },
-  //   {
-  //     image: child3,
-  //     text: 'Text Overlay 2',
-  //   },
-  //   {
-  //     image: child2,
-  //     text: 'Text Overlay 2',
-  //   },
-  // ];
+  
   const largeTextStyle = {
     fontSize: '36px',  // Adjust the font size as needed
     fontWeight: 'bold',
@@ -108,11 +93,7 @@ const smallTextStyle = {
                 <marquee behavior="" direction="">
                     <img src="https://zinginstruments.com/wp-content/uploads/family-on-a-beach.jpg" alt="Welcome to Our Home"  />
                 </marquee>
-                {/* <div className='image-text'>
-                    <h1 style={largeTextStyle}>Join The Team</h1>
-                    <h1 style={largeTextStyle}>How Can You Help?</h1>
-                    <p style={smallTextStyle}>Kindness Is Doing What You Can Where You Are With What You Have.</p>
-                </div> */}
+                
             </div>
 
       <div className="text-center mt-10">
@@ -166,58 +147,7 @@ const smallTextStyle = {
   </div>
 </section>
 
-      {/* <section className="text-center w-full my-10">
-  <p className="text-3xl font-bold mb-4">Location</p>
-  <p className="text-lg mb-2">Regions Covered...</p>
-  <p className="text-sm mb-4">Our organisation operates in the following regions...</p>
-  <table className="w-full bg-zinc-300 mt-4">
-    <thead>
-      <tr>
-        <th className="text-black text-2xl font-medium p-4">Name</th>
-        <th className="text-black text-2xl font-medium p-4">Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      {locationData.map((location) => (
-        <tr key={location.id}>
-          <td className="text-black text-2xl font-medium p-4">Name:</td>
-          <td className="text-black text-lg p-4">Location: {location.city}, {location.country}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</section> */}
-
-      {/* <section className="text-center w-full my-10">
-  <p className="text-3xl font-bold mb-4">Location</p>
-  <p className="text-lg mb-2">Regions Covered...</p>
-  <p className="text-sm mb-4">Our organisation operates in the following regions...</p>
-  <div className="bg-zinc-300 flex w-full justify-between gap-5 pl-11 pr-52 pt-4 pb-12">
-    <div className="text-black text-2xl font-medium grow shrink basis-auto">
-      Name
-    </div>
-    <div className="text-black text-2xl font-medium grow shrink basis-auto">
-      Location
-    </div>
-  </div>
-  <div className="bg-zinc-300 self-stretch mt-4 pl-11 pr-52 pt-2 pb-6">
-    <div className="flex items-stretch w-full">
-      <div className="flex flex-col items-stretch w-[65%] ml-0">
-        {locationData.map((location) => (
-          <div key={location.id} className="flex flex-col items-stretch mt-5">
-            <div className="justify-center text-black text-2xl font-medium mb-2">
-              Name:
-            </div>
-            <div className="justify-center text-black text-lg mb-2">
-              Location: {location.city}, {location.country}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section> */}
-
+      
       <section className="text-center bg-gray-200 py-10 flex justify-between items-center">
         <div>
           <p className="text-4xl font-bold mb-4">Donate Now</p>

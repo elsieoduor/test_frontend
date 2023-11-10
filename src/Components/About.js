@@ -1,5 +1,5 @@
 import React from 'react';
-import hands from "../assets/images/helpinghand.jpg";
+
 
 const About = () => {
   return (

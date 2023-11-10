@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
-import Review from "../../Components/Reviews";
+import Review from "../Review";
 
 function Reviews({ user }) {
   const [reviews, setReviews] = useState([]);
