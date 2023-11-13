@@ -31,11 +31,12 @@
 import React from 'react'
 // import Sidebar from './Sidebar';
 const homesData = [
-  { id: 1, name: 'Beautiful Home 1', description: 'Description for home 1' },
-  { id: 2, name: 'Cozy Cottage', description: 'Description for home 2' },
-  { id: 3, name: 'Luxury Villa', description: 'Description for home 3' },
-  { id: 4, name: 'Modern Apartment', description: 'Description for home 4' },
+  { id: 1, name: 'Cozy Cottage',  description: 'A charming cottage in a peaceful location.', },
+  { id: 2, name: 'Mwangaza Childrens Home',  description: 'Let Us Make A Change Together.', },
+  { id: 3,  name: 'Delulu Childrens Centre', description: 'Lets make a difference together.'},
+  { id: 4,  name: 'St.Josephs Care Centre',  description: 'Your heart reaches our home'},
 ];
+
 
 const Homes = () => {
   return (

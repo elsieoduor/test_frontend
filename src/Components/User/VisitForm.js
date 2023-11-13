@@ -5,16 +5,44 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const VisitForm = ({ setVisitDate, isLoggedIn }) => {
   const [visitDate, setVisitDateForm] = useState(new Date());
+  const [homeDetails, setHomeDetails] = useState(''); // Define homeDetails state
   const navigate = useNavigate();
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!isLoggedIn) {
       alert('Please log in to set a visit date.');
       return;
     }
 
-    setVisitDate(visitDate);
-    navigate('/donations');
+    // Replace 'loggedInUsername' with the actual variable or prop that holds the logged-in user's username
+    const loggedInUsername = 'replace-with-actual-username';
+
+    // Replace 'homeDetails' with the actual variable or state that holds home details
+    const visitData = {
+      visitDate,
+      home: homeDetails,
+      visitor: loggedInUsername,
+    };
+
+    // Make a visit request using the visitData
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/make_visit/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(visitData),
+      });
+
+      if (response.ok) {
+        alert('Visit scheduled successfully!');
+        navigate('/donations');
+      } else {
+        alert('Error scheduling visit');
+      }
+    } catch (error) {
+      console.error('Visit error:', error);
+    }
   };
 
   const handleCancel = () => {
@@ -44,7 +72,8 @@ const VisitForm = ({ setVisitDate, isLoggedIn }) => {
           <input
             type="text"
             placeholder="Enter home details"
-            onChange={(e) => setVisitDateForm(e.target.value)}
+            value={homeDetails}
+            onChange={(e) => setHomeDetails(e.target.value)} // Set homeDetails state
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
@@ -73,6 +102,7 @@ const VisitForm = ({ setVisitDate, isLoggedIn }) => {
 };
 
 export default VisitForm;
+
 
 // import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';

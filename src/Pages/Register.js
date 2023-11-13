@@ -2,9 +2,12 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext"; // Import the AuthContext
 
-function Signup({ onSignup }) {
+function Signup() {
   const navigate = useNavigate();
+  const { login } = useAuth(); // Use the useAuth hook to access the login function
+
   const initialValues = {
     username: "",
     email: "",
@@ -29,15 +32,33 @@ function Signup({ onSignup }) {
         body: JSON.stringify(values),
       });
 
-      if (response.ok) {
-        const user = await response.json();
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
-        if (user.error) {
-          alert("User already exists!");
-        } else {
+      const user = await response.json();
+
+      if (user.error) {
+        alert("User already exists!");
+      } else {
+        // Fetch user data after successful registration
+        const userDataResponse = await fetch(`http://127.0.0.1:8000/api/user/${user.id}/`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (userDataResponse.ok) {
+          const userData = await userDataResponse.json();
+
+          // Use the login function from the context to update the user state
+          login(userData);
+
           alert("Successfully created a new user!");
-          onSignup(user);
           navigate("/");
+        } else {
+          alert("Error fetching user data after registration");
         }
       }
     } catch (error) {
@@ -50,7 +71,7 @@ function Signup({ onSignup }) {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="bg-white p-8 rounded shadow-md mt-8 mb-8">
-      <img
+        <img
           src="https://static8.depositphotos.com/1003580/884/i/450/depositphotos_8846425-stock-photo-group-of-happy-children-playing.jpg"
           alt="Introductory Image"
           className="mb-4 mx-auto w-1/3"
@@ -131,15 +152,6 @@ function Signup({ onSignup }) {
                 />
               </div>
 
-              <div className="text-sm">
-                <p>
-                  Already have an account?{" "}
-                  <Link className="text-blue-500" to="/login">
-                    Login
-                  </Link>
-                </p>
-              </div>
-
               <button
                 type="submit"
                 className="bg-green-500 text-white py-2 px-4 rounded-md"
@@ -156,6 +168,111 @@ function Signup({ onSignup }) {
 }
 
 export default Signup;
+
+// import React from "react";
+// import { Formik, Form, Field, ErrorMessage } from "formik";
+// import * as Yup from "yup";
+// import { Link, useNavigate } from "react-router-dom";
+// import { useAuth } from "./AuthContext"; // Import the AuthContext
+
+// function Signup() {
+//   const navigate = useNavigate();
+//   const { login } = useAuth(); // Use the useAuth hook to access the login function
+
+//   const initialValues = {
+//     username: "",
+//     email: "",
+//     phone_number: "",
+//     password: "",
+//   };
+
+//   const validationSchema = Yup.object().shape({
+//     username: Yup.string().required("Username is required"),
+//     email: Yup.string().email("Invalid email").required("Email is required"),
+//     phone_number: Yup.string().required("Phone number is required"),
+//     password: Yup.string().required("Password is required"),
+//   });
+
+//   const handleSubmit = async (values, { setSubmitting }) => {
+//     try {
+//       const response = await fetch("http://127.0.0.1:8000/api/register/", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(values),
+//       });
+
+//       if (!response.ok) {
+//         throw new Error(`HTTP error! Status: ${response.status}`);
+//       }
+
+//       const user = await response.json();
+
+//       if (user.error) {
+//         alert("User already exists!");
+//       } else {
+//         // Fetch user data after successful registration
+//         const userDataResponse = await fetch(`http://127.0.0.1:8000/api/user/${user.id}/`, {
+//           method: "GET",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//         });
+
+//         if (userDataResponse.ok) {
+//           const userData = await userDataResponse.json();
+
+//           // Use the login function from the context to update the user state
+//           login(userData);
+
+//           alert("Successfully created a new user!");
+//           navigate("/");
+//         } else {
+//           alert("Error fetching user data after registration");
+//         }
+//       }
+//     } catch (error) {
+//       console.error("Signup error:", error);
+//     }
+
+//     setSubmitting(false);
+//   };
+
+//   return (
+//     <div className="flex items-center justify-center min-h-screen">
+//       <div className="bg-white p-8 rounded shadow-md mt-8 mb-8">
+//         <img
+//           src="https://static8.depositphotos.com/1003580/884/i/450/depositphotos_8846425-stock-photo-group-of-happy-children-playing.jpg"
+//           alt="Introductory Image"
+//           className="mb-4 mx-auto w-1/3"
+//         />
+//         <div className="text-2xl font-bold text-center mb-4">Sign Up</div>
+//         <Formik
+//           initialValues={initialValues}
+//           validationSchema={validationSchema}
+//           onSubmit={handleSubmit}
+//         >
+//           {({ isSubmitting }) => (
+//             <Form className="space-y-4">
+//               {/* ... (unchanged part of the form) */}
+
+//               <button
+//                 type="submit"
+//                 className="bg-green-500 text-white py-2 px-4 rounded-md"
+//                 disabled={isSubmitting}
+//               >
+//                 Sign Up
+//               </button>
+//             </Form>
+//           )}
+//         </Formik>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Signup;
 
 // import React, { useState } from 'react';
 

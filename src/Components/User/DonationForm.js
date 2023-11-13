@@ -8,15 +8,64 @@ const DonationForm = ({ handleMakeDonation }) => {
   const [donationAmount, setDonationAmount] = useState('');
   const navigate = useNavigate();
 
-  const handleDonate = () => {
-    handleMakeDonation({
-      username,
-      childrensHome,
-      donatedItem,
-      donationAmount,
-    });
-    navigate('/donations');
+  // const handleDonate = () => {
+  //   handleMakeDonation({
+  //     username,
+  //     childrensHome,
+  //     donatedItem,
+  //     donationAmount,
+  //   });
+  //   navigate('/donations');
+  // };
+  const handleDonate = async () => {
+    try {
+      // Fetch user data using the username
+      const userDataResponse = await fetch(`http://127.0.0.1:8000/api/user/?username=${username}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (userDataResponse.ok) {
+        const userData = await userDataResponse.json();
+  
+        // You might want to handle the case where multiple users have the same username
+        if (userData.length === 1) {
+          const user = userData[0];
+  
+          // Now you have the user data, you can use it in your donation request
+          const donationData = {
+            username: user.username,
+            childrensHome,
+            donatedItem,
+            donationAmount,
+          };
+  
+          // Make a donation using the user data
+          const response = await fetch('http://127.0.0.1:8000/api/make_donation/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(donationData),
+          });
+  
+          if (response.ok) {
+            alert('Donation successful!');
+            navigate('/donations');
+          } else {
+            alert('Error making donation');
+          }
+        } else {
+          alert('Error fetching user data');
+        }
+      }
+    } catch (error) {
+      console.error('Donation error:', error);
+    }
   };
+  
 
   const handleCancel = () => {
     navigate('/');
