@@ -84,8 +84,13 @@ import { Link } from 'react-router-dom';
 
 const HomesList = () => {
   const [homes, setHomes] = useState([
+<<<<<<< HEAD
     { id: 1, name: 'Delulu homes', address: 'Nyayo', description: 'Let Us Make A Change Together.',  },
     { id: 2, name: 'St.Josephs Care Centre', address: 'Nakuru', description: 'Join the team.' },
+=======
+    { id: 1, name: 'Cozy Cottage', address: '123 Main St', description: 'A charming cottage.' },
+    { id: 2, name: 'Modern Apartment', address: '456 Elm St', description: 'An apartment with city views.' },
+>>>>>>> origin/main
 
   ]);
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 
+<<<<<<< HEAD
 
 const Review = ({ onAddReview }) => {
   const [name, setName] = useState('');
@@ -35,6 +36,24 @@ const Review = ({ onAddReview }) => {
     setStars(null);
     setReviewText('');
   };
+=======
+const Review = () => {
+  const reviews = [
+    {
+      id: 1,
+      name: 'John Doe',
+      stars: 5,
+      review: 'A beautiful home with an amazing view. Truly enjoyed my stay!',
+    },
+    {
+      id: 2,
+      name: 'Jane Smith',
+      stars: 4,
+      review: 'Great home, wonderful experience. Would love to visit again.',
+    },
+    // Add more reviews as needed
+  ];
+>>>>>>> origin/main
 
   return (
     <div className="Rating">

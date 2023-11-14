@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from 'react'
 
 // const usersData = [
@@ -29,6 +30,8 @@
 // }
 
 // export default Users
+=======
+>>>>>>> origin/main
 import React from 'react';
 // import Sidebar from './Sidebar';
 
@@ -65,4 +68,8 @@ const Users = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Users;
+=======
+export default Users;
+>>>>>>> origin/main

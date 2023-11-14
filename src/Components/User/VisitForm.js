@@ -50,6 +50,7 @@ const VisitForm = ({ setVisitDate, isLoggedIn }) => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex items-center justify-center h-screen">
       <form className="bg-white p-10 rounded shadow-md">
         <h2 className="text-2xl font-bold mb-5 text-center">VISIT FORM</h2>
@@ -64,6 +65,17 @@ const VisitForm = ({ setVisitDate, isLoggedIn }) => {
             timeCaption="Time"
             dateFormat="MMMM d, yyyy h:mm aa"
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+=======
+    <div className="flex h-screen justify-center items-center">
+      <form className="bg-white p-10 rounded shadow-md">
+        <h2 className="text-2xl font-bold mb-5 text-center">Visit</h2>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Date</label>
+          <input
+            type="date"
+            value={visitDate}
+            onChange={(e) => setVisitDateForm(e.target.value)}
+>>>>>>> origin/main
           />
         </div>
 
@@ -72,9 +84,13 @@ const VisitForm = ({ setVisitDate, isLoggedIn }) => {
           <input
             type="text"
             placeholder="Enter home details"
+<<<<<<< HEAD
             value={homeDetails}
             onChange={(e) => setHomeDetails(e.target.value)} // Set homeDetails state
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+=======
+            onChange={(e) => setVisitDateForm(e.target.value)}
+>>>>>>> origin/main
           />
         </div>
 
@@ -90,7 +106,11 @@ const VisitForm = ({ setVisitDate, isLoggedIn }) => {
           <button
             type="button"
             onClick={handleCancel}
+<<<<<<< HEAD
             style={{ backgroundColor: '#E57C23', color: '#F8F1F1' }}
+=======
+            style={{ backgroundColor: 'red', color: '#F8F1F1' }}
+>>>>>>> origin/main
             className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Cancel

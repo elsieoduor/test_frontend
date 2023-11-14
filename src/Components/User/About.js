@@ -98,10 +98,51 @@ const smallTextStyle = {
 
       <div className="text-center mt-10">
         <p className="text-3xl font-bold mb-4">About Us</p>
+<<<<<<< HEAD
         <p className="text-xl mb-4">When You Loose A Parent,You Realise How Important They Are To The Foundation Of Your Life.</p>
         <a href="/about" className="text-blue-500 hover:underline block mb-8">Help Us Put A Smile On A DUll Face.</a>
+=======
+        <p className="text-xl mb-4">Some text description here, still centered.</p>
+        <a href="/about" className="text-blue-500 hover:underline block mb-8">Go to About Page</a>
       </div>
 
+      <div className="flex flex-wrap justify-center">
+        {/* Three cards - Example */}
+        <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
+          <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">Card 1</div>
+            <p className="text-gray-700 text-base">
+              Description for Card 1.
+            </p>
+          </div>
+        </div>
+
+        {/* Card 2 */}
+        <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">Card 2</div>
+            <p className="text-gray-700 text-base">
+              Description for Card 2.
+            </p>
+          </div>
+        </div>
+
+        {/* Card 3 */}
+        <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img src={hands} alt="About" className="w-full lg:w-80 h-90" />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">Card 3</div>
+            <p className="text-gray-700 text-base">
+              Description for Card 3.
+            </p>
+          </div>
+        </div>
+>>>>>>> origin/main
+      </div>
+
+      {/* Project Section */}
       <section className="text-center w-full my-10">
         <p className="text-3xl font-bold mb-4">WHAT WE DO.!!</p>
         <div className="flex flex-wrap justify-center">
@@ -112,6 +153,7 @@ const smallTextStyle = {
                 <p>{aboutUs.description}</p>
               </div>
             </div>
+<<<<<<< HEAD
           ))}
         </div>
       </section>
@@ -147,6 +189,37 @@ const smallTextStyle = {
   </div>
 </section>
 
+=======
+          </div>
+        ))}
+      </div>
+    </section>
+
+        {/* Location Section */}
+        <section className="w-full my-10">
+      <p className="text-3xl font-bold mb-4">Location</p>
+      <table className="w-full">
+        <tbody>
+          {locationData.map((location) => (
+            <tr key={location.id} className="border-b">
+              <td className="py-2 pr-4 text-xl font-semibold">{location.city}</td>
+              <td className="py-2 text-base">{location.country}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+        {/* Donate Now Banner */}
+    <section className="text-center bg-gray-200 py-10 flex justify-between items-center">
+      <div>
+        <p className="text-4xl font-bold mb-4">Donate Now</p>
+        <p>Support us and make a difference.</p>
+      </div>
+      <div>
+        <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Donate</button>
+      </div>
+    </section>
+>>>>>>> origin/main
       
       <section className="text-center bg-gray-200 py-10 flex justify-between items-center">
         <div>

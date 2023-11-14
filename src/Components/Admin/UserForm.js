@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState } from 'react';
 // import { FaPlus } from 'react-icons/fa';
 
@@ -52,6 +53,8 @@
 // };
 
 // export default UserForm;
+=======
+>>>>>>> origin/main
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 

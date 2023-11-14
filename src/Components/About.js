@@ -11,6 +11,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-wrap justify-center">
+        {/* Three cards - Example */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
           <img src="https://www.friendsofchildren.ca/application/themes/foc/images/homepage.jpg" alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">
@@ -22,6 +23,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Card 2 */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
         <img src="https://www.wvi.org/sites/default/files/2021-11/Children%20Bill.JPG" alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">
@@ -32,6 +34,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Card 3 */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
         <img src="https://www.keepingchildrensafe.global/wp-content/uploads/2022/03/OBFD7G0-scaled-1.jpg" alt="About" className="w-full lg:w-80 h-90" />
           <div className="px-6 py-4">

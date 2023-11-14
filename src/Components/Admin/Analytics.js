@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+<<<<<<< HEAD
 import Chart from 'chart.js/auto';
 
 const Analytics = ({ homes }) => {
@@ -9,6 +10,17 @@ const Analytics = ({ homes }) => {
     return <div>Loading...</div>;
   }
 
+=======
+
+
+const Analytics = ({ homes }) => {
+  // First, ensure that `homes` is an array before attempting to map over it
+  if (!Array.isArray(homes)) {
+    // If homes is not an array, return null or some placeholder content
+    return <div>Loading...</div>;
+  }
+
+>>>>>>> origin/main
   // Now we can safely map over homes because we have confirmed it's an array
   const data = {
     labels: homes.map(home => home.name),
