@@ -8,77 +8,21 @@ const DonationForm = ({ handleMakeDonation }) => {
   const [donationAmount, setDonationAmount] = useState('');
   const navigate = useNavigate();
 
-<<<<<<< HEAD
-  // const handleDonate = () => {
-  //   handleMakeDonation({
-  //     username,
-  //     childrensHome,
-  //     donatedItem,
-  //     donationAmount,
-  //   });
-  //   navigate('/donations');
-  // };
-  const handleDonate = async () => {
-    try {
-      // Fetch user data using the username
-      const userDataResponse = await fetch(`http://127.0.0.1:8000/api/user/?username=${username}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (userDataResponse.ok) {
-        const userData = await userDataResponse.json();
-  
-        // You might want to handle the case where multiple users have the same username
-        if (userData.length === 1) {
-          const user = userData[0];
-  
-          // Now you have the user data, you can use it in your donation request
-          const donationData = {
-            username: user.username,
-            childrensHome,
-            donatedItem,
-            donationAmount,
-          };
-  
-          // Make a donation using the user data
-          const response = await fetch('http://127.0.0.1:8000/api/make_donation/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(donationData),
-          });
-  
-          if (response.ok) {
-            alert('Donation successful!');
-            navigate('/donations');
-          } else {
-            alert('Error making donation');
-          }
-        } else {
-          alert('Error fetching user data');
-        }
-      }
-    } catch (error) {
-      console.error('Donation error:', error);
-    }
-=======
   const handleDonate = () => {
-    handleMakeDonation(donationAmount);
+    handleMakeDonation({
+      username,
+      childrensHome,
+      donatedItem,
+      donationAmount,
+    });
     navigate('/donations');
->>>>>>> origin/main
   };
-  
 
   const handleCancel = () => {
     navigate('/');
   };
 
   return (
-<<<<<<< HEAD
     <div className="flex flex-col items-center justify-center mt-10 mb-10">
       <form className="bg-zinc-300 flex flex-col px-6 py-8 rounded-md max-w-md">
         <div className="text-black text-4xl font-bold text-center mb-8">Donate</div>
@@ -136,56 +80,12 @@ const DonationForm = ({ handleMakeDonation }) => {
         >
           Cancel
         </button>
-=======
-    <div className="flex h-screen justify-center items-center">
-      <form className="bg-white p-10 rounded shadow-md">
-        <h2 className="text-2xl font-bold mb-5 text-center">Donate</h2>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Amount</label>
-          <input
-            type="number"
-            placeholder="Donation Amount"
-            value={donationAmount}
-            onChange={(e) => setDonationAmount(e.target.value)}
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Amount</label>
-          <input
-            type="number"
-            placeholder="Donation Amount"
-            value={donationAmount}
-            onChange={(e) => setDonationAmount(e.target.value)}
-          />
-        </div>
-
-        <div className="flex items-center justify-between">
-          <button
-            type="submit"
-            onClick={handleDonate}
-            style={{ backgroundColor: '#E57C23', color: '#F8F1F1' }}
-            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Donate
-          </button>
-          <button
-            type="submit"
-            onClick={handleCancel}
-            style={{ backgroundColor: 'red', color: '#F8F1F1' }}
-            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Cancel
-          </button>
-        </div>
->>>>>>> origin/main
       </form>
     </div>
   );
 };
 
 export default DonationForm;
-<<<<<<< HEAD
 
 
 // import React, { useState } from 'react';
@@ -303,5 +203,3 @@ export default DonationForm;
 
 // export default DonationForm;
 
-=======
->>>>>>> origin/main

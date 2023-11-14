@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext"; // Import the AuthContext
 
-<<<<<<< HEAD
 function Signup() {
   const navigate = useNavigate();
-  const { login } = useAuth(); // Use the useAuth hook to access the login function
+  const { login } = useAuth();
 
   const initialValues = {
     username: "",
@@ -42,7 +41,6 @@ function Signup() {
       if (user.error) {
         alert("User already exists!");
       } else {
-        // Fetch user data after successful registration
         const userDataResponse = await fetch(`http://127.0.0.1:8000/api/user/${user.id}/`, {
           method: "GET",
           headers: {
@@ -52,10 +50,7 @@ function Signup() {
 
         if (userDataResponse.ok) {
           const userData = await userDataResponse.json();
-
-          // Use the login function from the context to update the user state
           login(userData);
-
           alert("Successfully created a new user!");
           navigate("/");
         } else {
@@ -68,6 +63,13 @@ function Signup() {
 
     setSubmitting(false);
   };
+
+  useEffect(() => {
+    // Add any cleanup or side effect code if needed
+    return () => {
+      // Cleanup code goes here
+    };
+  }, []); // Empty dependency array means this effect runs once after the initial render
 
   return (
     <div className="flex items-center justify-center min-h-screen">

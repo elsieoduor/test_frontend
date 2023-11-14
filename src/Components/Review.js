@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 
-<<<<<<< HEAD
-
 const Review = ({ onAddReview }) => {
   const [name, setName] = useState('');
   const [stars, setStars] = useState(null);
@@ -21,6 +19,11 @@ const Review = ({ onAddReview }) => {
   };
 
   const handleAddReview = () => {
+    if (!name || !stars || !reviewText) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+
     const reviewData = {
       name,
       stars,
@@ -29,36 +32,16 @@ const Review = ({ onAddReview }) => {
 
     onAddReview(reviewData);
 
-    // You can also make a fetch request to your backend to store the review data if needed
-
     // Clear the form fields
     setName('');
     setStars(null);
     setReviewText('');
   };
-=======
-const Review = () => {
-  const reviews = [
-    {
-      id: 1,
-      name: 'John Doe',
-      stars: 5,
-      review: 'A beautiful home with an amazing view. Truly enjoyed my stay!',
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      stars: 4,
-      review: 'Great home, wonderful experience. Would love to visit again.',
-    },
-    // Add more reviews as needed
-  ];
->>>>>>> origin/main
 
   return (
     <div className="Rating">
       <div className="rating-card">
-        {[...Array(5)].map((star, index) => (
+        {[...Array(5)].map((_, index) => (
           <label key={index}>
             <input
               type="radio"
@@ -100,62 +83,13 @@ const Review = () => {
   );
 };
 
-let styles = {
+const styles = {
   ratingText: {
     fontSize: '20px',
     fontWeight: 'bold',
-    font: 'italic',
+    fontStyle: 'italic',
     margin: '10px 0',
   },
 };
 
 export default Review;
-
-// import React from 'react'
-
-// const Review = () => {
-//   const reviews = [
-//     {
-//       id: 1,
-//       name: 'Mary Silas',
-//       stars: 5,
-//       review: 'A beautiful home with an amazing view. Truly enjoyed my stay!',
-//     },
-//     {
-//       id: 2,
-//       name: 'Derrick Smith',
-//       stars: 4,
-//       review: 'Great home, wonderful experience. Would love to visit again.',
-//     },
-//   ];
-
-//   return (
-//     <div className="lg:mx-32 mt-8 lg:mt-16">
-//       <p className="text-center text-3xl font-bold mb-4">Reviews</p>
-
-//       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-//         {reviews.map((review) => (
-//           <div key={review.id} className="border rounded-lg overflow-hidden shadow-lg">
-//             <div className="p-4 flex items-center">
-//               <span className="font-bold">{review.name}</span>
-//               <div className="ml-auto flex">
-//                 {[...Array(review.stars)].map((star, index) => (
-//                   <svg
-//                     key={index}
-//                     className="w-5 h-5 fill-current text-yellow-400 ml-1"
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     viewBox="0 0 20 20"
-//                   >
-//                     <path d="M10 1l2.72 6.05 6.28.45-4.81 4.69 1.14 6.28-6.31-3.32-6.31 3.32 1.14-6.28-4.81-4.69 6.28-.45L10 1z" />
-//                   </svg>
-//                 ))}
-//               </div>
-//             </div>
-//             <p className="italic p-4">&quot;{review.review}&quot;</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-// export default Review
